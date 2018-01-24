@@ -1,2 +1,9 @@
 # Dual-Process-Protect
 windows双向程序守护
+
+safeprocessDemo目录为主程序,TempProcess目录为临时进程,ExeProtect目录为守护进程,bin目录为编译的exe
+safeprocessDemo.exe启动后通过TempProcess.exe启动ExeProtect.exe
+
+ProcessSet.ini为配置文件 当Protect=1 safeprocessDemo.exe和ExeProtect.exe互相监控,杀一个会启一个
+
+当Protect=0 safeprocessDemo.exe方可杀掉,safeprocessDemo.exe的同时ExeProtect.exe也自动结束
